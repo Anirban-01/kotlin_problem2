@@ -1,0 +1,29 @@
+/* Attempt to combine various vals of different types using the + operator. Only combine two at a time, and assign each combination to a val result. 
+See which types combine. On the console, display the name of the type that can be combined with any other type if it goes first.
+Replace the lines containing TODO() in the solution code with working code. If you don't remove these lines, you'll see an error saying "Operation is not implemented." */
+
+
+fun main() {
+  val int: Int = 10
+  val double: Double = 1.1
+  val boolean: Boolean = false
+  val string: String = "abc"
+  val character: Char = 'a'
+
+  // Can be combined:
+  val result1: Double = int + double
+  val result4: String = string + int
+  val result6: Char = character + int
+  val result8: String = string + character
+  val result9: String = string + boolean
+
+  println("The type that can be combined " +
+    "with every other type using '+':")
+  println("String")
+
+  // Can't be combined:
+  //val result2: Double  = double + boolean
+  //val result3: Char = double + boolean
+  //val result5: Char = character + Int
+  //val result7: Char = character + double
+}
